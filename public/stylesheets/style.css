@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.3);
+}
+
+.popup-inner {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px 25px;
+}
+
+.col-md-6{
+  padding-left: 0;
+}
+
+.close.btn.input-group-text input[type="checkbox"] {
+  transform:scale(1.5);
+  opacity:0.9;
+  cursor:pointer;
+}
+
+.close.btn.btn-danger {
+  cursor:pointer;
+}

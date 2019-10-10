@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Note</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+    <div class="container" id="single-note-page">
+        <div class="mt-3"></div>
+        <a href="/" class="btn btn-secondary">Go Back</a>
+        <div class="col-md-4 offset-md-4 mt-5">
+            <div class="card" data-id="<%= note.id %>">
+                <div class="card-body">
+                    <h5 class="card-title"><%= note.title %></h5>
+                    <p class="card-text"><%= note.text %></p>
+                    <button class="btn btn-warning" data-edit="<%= note.id %>">Edit</button>
+                    <button class="btn btn-danger" data-delete="<%= note.id %>">-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="edit-popup">
+        <div class="popup-inner">
+            <form>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" name="title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Text</label>
+                    <textarea type="text" name="text" class="form-control" required></textarea>
+                </div>
+                <input type="hidden" name="id" class="form-control">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="/javascripts/app.js"></script>
+</body>
+</html>

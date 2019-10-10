@@ -1,0 +1,12 @@
+<% if(list.todos) { %>
+    <% for({ text, checked } of list.todos.sort(a => a.checked ? 1 : -1)) { %>
+        <div class="list-group-item">
+            <div class="input-group-text">
+                <input type="checkbox" <%= checked ? 'checked="checked"' : ''%> >
+                <%= checked ? '<del>' : ''%>
+                <%= text%>
+                <%= checked ? '</del>' : ''%>
+            </div>
+        </div>
+    <% } %>
+<% } %>

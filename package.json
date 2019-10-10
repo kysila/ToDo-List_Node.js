@@ -1,0 +1,32 @@
+{
+  "name": "step-project-notes",
+  "version": "1.0.0",
+  "description": "Step project notes",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antilik/step-project-notes.git"
+  },
+  "keywords": [
+    "step-project-notes"
+  ],
+  "author": "Anton Degnera, Artem Kysil, Kate Petrova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antilik/step-project-notes/issues"
+  },
+  "homepage": "https://github.com/antilik/step-project-notes#readme",
+  "dependencies": {
+    "nodemon": "^1.19.2",
+    "cookie-parser": "^1.4.4",
+    "debug": "^2.6.9",
+    "ejs": "^2.6.1",
+    "express": "^4.16.1",
+    "http-errors": "^1.6.3",
+    "mongodb": "^3.3.2",
+    "morgan": "^1.9.1"
+  }
+}

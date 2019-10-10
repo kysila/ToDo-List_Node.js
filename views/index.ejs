@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Notes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<div class="container">
+    <div class="pb-3 text-right">
+        <a href="/notes" class="btn btn-success">Create Note</a>
+        <a href="/lists" class="btn btn-success">Create List</a>
+    </div>
+    <h2>NOTES</h2>
+    <div class="row" id="notes-row">
+        <% for ({id, title, text} of notes) { %>
+            <div class="col-md-6 mb-3">
+                <div class="card" data-id="<%= id %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= title %></h5>
+                        <p class="card-text"><%= text %></p>
+                        <a href="/notes/<%= id %>" class="btn btn-primary mr-4">More details</a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    <h2>TODO LISTS</h2>
+    <div class="row" id="lists-row">
+        <% for ({id, title, text} of lists) { %>
+            <div class="col-md-6 mb-3">
+                <div class="list-item card" data-id="<%= id %>">
+                    <div class="list-item__body card-body">
+                        <h5 class="list-item__title"><%= title %></h5>
+                        <p class="list-item__text"><%= text %></p>
+                        <a href="/lists/<%= id %>" class="btn btn-primary mr-4">More details</a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+<script src="/javascripts/app.js"></script>
+</body>
+</html>
